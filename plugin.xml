@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-getlocation" version="13.0.1"
+		xmlns="http://apache.org/cordova/ns/plugins/1.0"
+		xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>Location</name>
+
+	<license>MIT</license>
+
+	<engines>
+		<engine name="cordova" version=">=9" />
+		<engine name="cordova-android" version=">=8" />
+	</engines>
+	
+	<js-module name="Location" src="www/location.js">
+		<clobbers target="Location" />
+	</js-module>
+
+	<platform name="android">
+
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="Location">
+				<param name="android-package" value="org.apache.cordova.getlocation.GetLocation" />
+				<param name="onload" value="true" />
+			</feature>
+		</config-file>
+		
+		<config-file target="AndroidManifest.xml" parent="/*">
+			<uses-permission android:name="android.permission.INTERNET" />
+			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+			<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+		</config-file>
+		
+		<source-file src="src/android/GetLocation.java" target-dir="src/org/apache/cordova/getlocation" />
+
+		<framework src="com.google.android.gms:play-services-location:+" />
+		
+	</platform>
+
+</plugin>

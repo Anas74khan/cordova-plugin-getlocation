@@ -1,0 +1,30 @@
+{
+  "author": {
+    "name": "Mohd Anas Khan"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Anas74khan/cordova-plugin-getlocation"
+  },
+  "name": "cordova-plugin-getlocation",
+  "version": "0.0.1",
+  "description": "Cordova plugin for getting current location.",
+  "cordova": {
+    "id": "cordova-plugin-getlocation",
+    "platforms": [
+      "android"
+    ]
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "location"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {}
+}
